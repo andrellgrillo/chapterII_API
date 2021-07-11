@@ -1,5 +1,3 @@
-import { response } from "express";
-
 import { Category } from "../models/Categories";
 
 interface ICreateCategoryDTO {
