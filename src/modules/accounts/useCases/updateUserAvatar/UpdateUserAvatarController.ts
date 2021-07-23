@@ -14,5 +14,3 @@ class UpdateUserAvatarController {
 }
 
 export { UpdateUserAvatarController };
-
-// COMPLETE receber arquivo
