@@ -3,7 +3,7 @@
   "host": "localhost",
   "port": 3306,
   "username": "root",
-  "password": "a05a21r02",
+  "password": "An05a21r02@",
   "database": "rentx",
   "entities": ["./src/modules/**/entities/*.ts"],
   "migrations": ["./src/shared/infra/typeorm/migrations/*.ts"],
