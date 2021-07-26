@@ -13,7 +13,7 @@
 [x] Testes: Teste de autenticação de usuário
 [x] Testes: Imports da aplicação
 [x] Testes: Corrigindo as importações
-[ ] Testes: Refatorando a aplicação
+[x] Testes: Refatorando a aplicação
 
 [ ] Requisitos: Escrevendo os requisitos da aplicação,
 
