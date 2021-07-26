@@ -1,4 +1,5 @@
 import { CarsRepositoryInMemory } from "@modules/cars/repositories/in-memory/CarsRepositoryInMemory";
+import { AppError } from "@shared/errors/AppError";
 
 import { CreateCarUseCase } from "./CreateCarUseCase";
 
@@ -33,6 +34,30 @@ describe("Create Car", () => {
         fine_amount: 100,
         brand: "Brand",
         category_id: "1a2s3d6f4g6h9y8t7r4e1w2q1a2s3d6f5g4h",
-    }) 
+      });
+
+      await createCarUseCase.execute({
+        name: "New Car2",
+        description: "New Car",
+        daily_rate: 5,
+        license_plate: "ABC1454",
+        fine_amount: 100,
+        brand: "Brand",
+        category_id: "1a2s3d6f4g6h9y8t7r4e1w2q1a2s3d6f5g4h",
+      }); 
+    }).rejects.toBeInstanceOf(AppError);
+  });
+
+  it("should note be able to create a car with availabel false by default", async () => {
+    const car = await createCarUseCase.execute({
+      name: "Car Available",
+      description: "Description",
+      daily_rate: 100,
+      license_plate: "ABC-1234",
+      fine_amount: 60,
+      brand: "Brand",
+      category_id: "category"
+    });
+    expect(car.available).toBe(true);
   })
-});
+})
