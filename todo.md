@@ -15,7 +15,7 @@
 [x] Testes: Corrigindo as importações
 [x] Testes: Refatorando a aplicação
 
-[ ] Requisitos: Escrevendo os requisitos da aplicação,
+[x] Requisitos: Escrevendo os requisitos da aplicação,
 
 [ ] Carros: Alterando a importação dos repositórios
 [ ] Carros: Criando migrations do carro
