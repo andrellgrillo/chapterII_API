@@ -1,11 +1,12 @@
 import { ICarsDTO } from "@modules/cars/dtos/ICarsDTO";
 import { Car } from "@modules/cars/infra/typeorm/entities/Cars";
-import { carsRoutes } from "@shared/infra/http/routes/cars.routes";
+import { usersRoutes } from "@shared/infra/http/routes/users.routes";
 
 import { ICarsRepository } from "../ICarsRepository";
 
 class CarsRepositoryInMemory implements ICarsRepository {
   cars: Car[] = [];
+
   async create({
     name,
     description,
@@ -14,7 +15,7 @@ class CarsRepositoryInMemory implements ICarsRepository {
     fine_amount,
     brand,
     category_id,
-  }: ICarsDTO) {
+  }: ICarsDTO): Promise<Car> {
     const car = new Car();
     Object.assign(car, {
       name,
@@ -26,6 +27,7 @@ class CarsRepositoryInMemory implements ICarsRepository {
       category_id,
     });
     this.cars.push(car);
+    console.log(car);
     return car;
   }
 
@@ -38,23 +40,19 @@ class CarsRepositoryInMemory implements ICarsRepository {
     category_id?: string,
     name?: string
   ): Promise<Car[]> {
-    const all = this.cars.filter((car) => {
-      if (
-        (brand && car.brand === brand) ||
-        (category_id && car.category_id === category_id) ||
-        (name && car.name === name)
-      ) {
-        return car;
-      }
-      if (!brand && !name && !category_id) {
-        if (car.isAvailable) {
-          return car;
-        }
-      }
-      return null;
+    let availableCars = this.cars.filter((car) => car.isAvailable);
+
+    if (!name && !brand && !category_id) return availableCars;
+
+    availableCars = availableCars.filter((car) => {
+      if (car.name === name) return true;
+      if (car.brand === brand) return true;
+      if (car.category_id === category_id) return true;
+
+      return false;
     });
 
-    return all;
+    return availableCars;
   }
 }
 
