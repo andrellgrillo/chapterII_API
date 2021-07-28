@@ -17,18 +17,23 @@
 
 [x] Requisitos: Escrevendo os requisitos da aplicação,
 
-[ ] Carros: Alterando a importação dos repositórios
-[ ] Carros: Criando migrations do carro
-[ ] Carros: TDD na pratica
-[ ] Carros: Continuando o caso de uso de carros
-[ ] Carros: Estruturando a entidade de carros
-[ ] Carros: Criando seed de usuário
-[ ] Carros: Criando o middleware de administrador
-[ ] Carros: Listando carros disponíveis
-[ ] Carros: Continuação da listagem de carros disponíveis
-[ ] Carros: Criando migrations especificação de carros(manytomany)
-[ ] Carros: Caso de uso do cadastro de especificação para carro
-[ ] Carros: Continuação dos CreateCarSpecificationUseCase
-[ ] Carros: Finalizando CreateCarSpecificationUseCase
+# Atividades do dia 27/07/2021
+
+[x] Carros: Alterando a importação dos repositórios
+[x] Carros: Criando migrations do carro
+[x] Carros: TDD na pratica
+[x] Carros: Continuando o caso de uso de carros
+[x] Carros: Estruturando a entidade de carros
+[x] Carros: Criando seed de usuário
+[x] Carros: Criando o middleware de administrador
+[x] Carros: Listando carros disponíveis
+
+# Atividades do dia 28/07/2021
+
+[x] Carros: Continuação da listagem de carros disponíveis
+[x] Carros: Criando migrations especificação de carros(manytomany)
+[x] Carros: Caso de uso do cadastro de especificação para carro
+[x] Carros: Continuação dos CreateCarSpecificationUseCase
+[x] Carros: Finalizando CreateCarSpecificationUseCase
 [ ] Carros: Criando migrations de imagens de carro
 [ ] Carros: Caso de uso de cadastro de imagens do carro s
