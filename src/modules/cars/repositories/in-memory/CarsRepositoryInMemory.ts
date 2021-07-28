@@ -1,6 +1,6 @@
 import { ICarsDTO } from "@modules/cars/dtos/ICarsDTO";
 import { Car } from "@modules/cars/infra/typeorm/entities/Cars";
-import { usersRoutes } from "@shared/infra/http/routes/users.routes";
+// import { usersRoutes } from "@shared/infra/http/routes/users.routes";
 
 import { ICarsRepository } from "../ICarsRepository";
 
@@ -15,6 +15,8 @@ class CarsRepositoryInMemory implements ICarsRepository {
     fine_amount,
     brand,
     category_id,
+    specifications,
+    id,
   }: ICarsDTO): Promise<Car> {
     const car = new Car();
     Object.assign(car, {
@@ -25,9 +27,10 @@ class CarsRepositoryInMemory implements ICarsRepository {
       fine_amount,
       brand,
       category_id,
+      specifications,
+      id,
     });
     this.cars.push(car);
-    console.log(car);
     return car;
   }
 
@@ -53,6 +56,10 @@ class CarsRepositoryInMemory implements ICarsRepository {
     });
 
     return availableCars;
+  }
+
+  async findById(id: string): Promise<Car> {
+    return this.cars.find((car) => car.id === id);
   }
 }
 
