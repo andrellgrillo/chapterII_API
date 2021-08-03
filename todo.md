@@ -35,5 +35,22 @@
 [x] Carros: Caso de uso do cadastro de especificação para carro
 [x] Carros: Continuação dos CreateCarSpecificationUseCase
 [x] Carros: Finalizando CreateCarSpecificationUseCase
-[ ] Carros: Criando migrations de imagens de carro
-[ ] Carros: Caso de uso de cadastro de imagens do carro s
+
+# Atividade do dia 29/07/2021
+[x] Carros: Criando migrations de imagens de carro
+[x] Carros: Caso de uso de cadastro de imagens do carros
+
+# Atividade do dia 30/07/2021
+[x] Criando migrations do aluguel
+[x] Criando os testes do alugel
+
+# Atividade do dia 01/08/2021
+[x] Continuação do cadastro de aluguel
+[x] Trabalhando com datas no dayjs
+
+# Atividade do dia 02/08/2021
+[x] Criando provider para a data
+[x] Criando o Controller
+[ ] Configurando o supertest
+[ ] Criando o primeiro teste de integração
+[ ] Criando o teste de listagem de categorias
