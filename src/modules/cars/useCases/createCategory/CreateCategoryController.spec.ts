@@ -1,7 +1,7 @@
 import { hash } from "bcrypt";
 import request from "supertest";
 import { Connection } from "typeorm";
-import { v4 as uuidv4 } from "uuid";
+import { v4 as uuid } from "uuid";
 
 import { app } from "@shared/infra/http/app";
 import createConnection from "@shared/infra/typeorm";
@@ -13,7 +13,7 @@ describe("Create Category Controller", () => {
     connection = await createConnection();
     await connection.runMigrations();
 
-    const id = uuidv4();
+    const id = uuid();
     const password = await hash("admin", 8);
 
     await connection.query(
