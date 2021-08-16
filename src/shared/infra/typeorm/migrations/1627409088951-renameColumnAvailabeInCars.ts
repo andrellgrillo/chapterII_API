@@ -1,4 +1,3 @@
-import { query } from "express";
 import { MigrationInterface, QueryRunner } from "typeorm";
 
 export class renameColumnAvailabeInCars1627409088951
