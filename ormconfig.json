@@ -1,8 +1,8 @@
 {
   "type": "mysql",
-  "host": "localhost",
+  "host": "mysql.planexconativ.com.br",
   "port": 3306,
-  "username": "root",
+  "username": "planexconativ",
   "password": "a05a21r02",
   "database": "rentx",
   "entities": ["./src/modules/**/entities/*.ts"],
