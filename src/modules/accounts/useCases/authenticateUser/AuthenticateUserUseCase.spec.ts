@@ -7,6 +7,7 @@ import { AuthenticateUserUseCase } from "./AuthenticateUserUseCase";
 
 let authenticateUserUseCase: AuthenticateUserUseCase;
 let usersRepositoryInMemory: UsersRepositoryInMemory;
+let usersTokenRepositoryInMemory: 
 let createUserUseCase: CreateUserUseCase;
 
 describe("Authenticate User", () => {
