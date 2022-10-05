@@ -10,15 +10,14 @@ let connection: Connection;
 describe("Create Category Controller", () => {
   beforeAll(async () => {
     connection = await createConnection();
-    //  console.log(connection);
     await connection.runMigrations();
 
     const id = uuid();
     const password = await hash("admin", 8);
 
     await connection.query(
-      `INSERT INTO users(id, name, email, password, isAdmin, created_at, driver_license ) 
-        values('${id}', 'admin', 'admin@rentx.com.br', '${password}', 1, 'now()', 'XXXXXX')
+      `INSERT INTO USERS(id, name, email, password, "isAdmin", created_at, driver_license ) 
+        values('${id}', 'admin', 'admin@rentx.com.br', '${password}', true, 'now()', 'XXXXXX')
       `
     );
   });
@@ -32,7 +31,7 @@ describe("Create Category Controller", () => {
     const responseToken = await request(app).post("/sessions").send({
       email: "admin@rentx.com.br",
       password: "admin",
-    }); 
+    });
 
     const { refresh_token } = responseToken.body;
 
